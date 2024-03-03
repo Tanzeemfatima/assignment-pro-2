@@ -32,19 +32,45 @@ nav {
 }
 
 .menu-bar {
+    max-width: 900px;
     text-decoration: none;
     list-style: none;
     font-size: 20px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    padding: 20px;
+
 }
 
 .menu-bar>li {
     margin-right: 35px;
 }
 
+li:hover {
+    color: orange;
+}
+
 .home {
     color: orangered;
+}
+
+/* .....nav bar responsive... */
+@media screen and (max-width: 600px) {
+
+    .menu-bar,
+    .logo-title,
+    nav {
+        flex-direction: column;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0px;
+    }
+
+    .logo-img {
+        width: 100px;
+    }
 }
 
 body {
@@ -71,7 +97,6 @@ body {
 .banner-des {
     font-weight: 500;
     font-size: 24px;
-    -
 }
 
 input {
@@ -92,10 +117,19 @@ input {
 /* ...banner part responsive.... */
 @media screen and (max-width: 600px) {
 
-    input {
-        display: block;
+    .banner {
+        flex-direction: column;
+        width: 400px;
+        margin: 0px 50px;
+        font-size: 24px;
+        justify-content: center;
+        align-items: center;
+
     }
 
+    input {
+        padding: 10px;
+    }
 }
 
 /* ................ */
@@ -105,6 +139,7 @@ input {
 .popular-tour-section {
     display: flex;
     gap: 50px;
+    margin-top: -300px;
 }
 
 .sec-title {
@@ -135,6 +170,29 @@ input {
     height: 400px;
 }
 
+/* ...popular part responsive.... */
+@media screen and (max-width: 600px) {
+
+    .popular-tour-section {
+        flex-direction: column;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0px;
+    }
+
+    .popular-tours-point,
+    .popular-tours-point>li {
+        padding: 5px;
+    }
+
+    .popular-tours-img {
+        width: 300px;
+        height: 400px;
+
+    }
+}
+
 /* ...Choose your destination section.. */
 
 .destination-choose-sec {
@@ -142,20 +200,48 @@ input {
     margin: 200px 0px;
 }
 
-.choose-img {
-    display: grid;
-    grid-gap: 30px 10px;
-    grid-template-columns: repeat(2, 1fr);
-    width: 50%;
-    padding: 10px;
-    margin: 100px 0px;
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.img-text {
+    letter-spacing: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.first-row {
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+    z-index: 2;
 }
 
 .second-row {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding: 15px;
 
+}
+
+.third-row {
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+}
+
+/* destination section responsive */
+@media screen (max-width: 600px) {
+
+    .first-row,
+    .second-row,
+    .third-row {
+        flex-direction: column;
+    }
 }
 
 /* .........Why Choose Us...... */
@@ -212,10 +298,14 @@ input {
     height: 450px;
 }
 
+.newsletter-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
 .subscribe-sec {
     border: 2px solid orangered;
     border-radius: 10px;
-    /* margin: 20px 0px; */
     padding: 50px;
     width: 100%;
 }
@@ -258,18 +348,34 @@ input {
     height: 450px;
 }
 
+/* ....relative section... */
+.bonus-section {
+    margin: 100px 0px;
+}
+
+.rating-des {
+    font-size: 24px;
+}
+
+.rating-icon {
+    display: flex;
+    width: 30px;
+    margin: 30px 0px;
+}
+
 /* ...............footer part............ */
 .footer {
     text-align: center;
     margin: 300px 0px 0px;
+    background-color: aliceblue;
 }
 
 .footer-logo-title {
     font-size: 28px;
     display: flex;
-    margin: 100px 400px;
+    margin: 80px 450px;
 }
 
-hr {
-    width: ;
+.footer-des {
+    margin: 20px 0px;
 }
